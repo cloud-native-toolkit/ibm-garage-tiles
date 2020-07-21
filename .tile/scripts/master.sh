@@ -33,7 +33,7 @@ if [ -z "${GIT_REPO}" ]; then
 fi
 
 if [ -z "${OFFERINGS}" ]; then
-  OFFERINGS="offering-cloudnative-toolkit,offering-sre-tools"
+  OFFERINGS="#OFFERINGS"
 fi
 
 # input validation, Version is provided when the packaged release of this repository is created
