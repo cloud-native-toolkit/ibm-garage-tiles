@@ -22,15 +22,6 @@ module "sre_sysdig" {
   name                     = var.sysdig_name
 }
 
-module "sre_activity-tracker" {
-  source = "github.com/ibm-garage-cloud/terraform-ibm-activity-tracker.git?ref=v1.1.1"
-
-  resource_group_name      = var.resource_group_name
-  resource_location        = var.region
-  name_prefix              = var.name_prefix
-  provision                = var.provision_activity_tracker == "true"
-}
-
 module "sre_key-protect" {
   source = "github.com/ibm-garage-cloud/terraform-ibm-key-protect.git?ref=v1.2.0"
 
