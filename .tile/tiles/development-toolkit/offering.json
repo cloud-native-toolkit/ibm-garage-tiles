@@ -101,6 +101,30 @@
               "hidden": false
             },
             {
+              "key": "vpc_zone_names",
+              "type": "string",
+              "default_value": "",
+              "description": "Comma-separated list of vpc zones",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "cluster_machine_type",
+              "type": "string",
+              "default_value": "b3c.4x16",
+              "description": "The machine type for the cluster worker nodes (b3c.4x16 is minimum for OpenShift)",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "cluster_worker_count",
+              "type": "number",
+              "default_value": 3,
+              "description": "The number of worker nodes in each zone of the cluster",
+              "required": false,
+              "hidden": false
+            },
+            {
               "key": "TF_VERSION",
               "type": "string",
               "default_value": "0.12",

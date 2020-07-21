@@ -53,6 +53,12 @@ variable "vlan_region" {
   default     = ""
 }
 
+variable "vpc_zone_names" {
+  type        = string
+  description = "Comma-separated list of zones"
+  default     = ""
+}
+
 # Cluster Variables
 variable "cluster_machine_type" {
   type        = string
