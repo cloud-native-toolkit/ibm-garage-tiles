@@ -69,18 +69,10 @@
               "hidden": false
             },
             {
-              "key": "cluster_machine_type",
+              "key": "flavor",
               "type": "string",
               "default_value": "b3c.4x16",
               "description": "The machine type for the cluster worker nodes (b3c.4x16 is minimum for OpenShift)",
-              "required": false,
-              "hidden": false
-            },
-            {
-              "key": "cluster_worker_count",
-              "type": "number",
-              "default_value": 3,
-              "description": "The number of worker nodes in each zone of the cluster",
               "required": false,
               "hidden": false
             },
