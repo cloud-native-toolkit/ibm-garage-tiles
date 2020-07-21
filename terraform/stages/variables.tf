@@ -69,7 +69,7 @@ variable "cluster_machine_type" {
 # Cluster Variables_num
 variable "cluster_worker_count" {
   description = "The number of worker nodes for the cluster"
-  default     = 3
+  default     = 2
 }
 
 # Cluster Variables

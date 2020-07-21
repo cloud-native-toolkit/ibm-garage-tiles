@@ -7,7 +7,7 @@
     "dev_ops"
   ],
   "rating": {},
-  "short_description": "This tile provisions LogDNA, Sysdig, and Key Protect into the resource group",
+  "short_description": "This tile provisions LogDNA, Sysdig, Activity Tracker, and Key Protect into the resource group",
   "kinds": [
     {
       "format_kind": "terraform",
@@ -71,7 +71,7 @@
             {
               "key": "provision_activity_tracker",
               "type": "string",
-              "default_value": "true",
+              "default_value": "false",
               "description": "Flag indicating that the activity-tracker instance should be provisioned",
               "required": false,
               "hidden": false
