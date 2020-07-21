@@ -23,7 +23,7 @@
             {
               "key": "cluster_exists",
               "type": "string",
-              "default_value": "true",
+              "default_value": "false",
               "description": "Flag indicating that the cluster already exists (true or false)",
               "required": true,
               "hidden": false
@@ -31,7 +31,7 @@
             {
               "key": "cluster_type",
               "type": "string",
-              "default_value": "ocp4",
+              "default_value": "kubernetes",
               "description": "The type of cluster into which the #OFFERING will be installed (ocp4, ocp3 or kubernetes)",
               "required": true,
               "hidden": false
@@ -103,7 +103,7 @@
             {
               "key": "vpc_zone_names",
               "type": "string",
-              "default_value": "",
+              "default_value": "us-east-1",
               "description": "Comma-separated list of vpc zones",
               "required": false,
               "hidden": false
