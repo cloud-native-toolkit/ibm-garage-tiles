@@ -162,3 +162,9 @@ variable "vpc_zone_names" {
   description = "Comma-separated list of vpc zone names"
   default     = ""
 }
+
+variable "provision_activity_tracker" {
+  type        = string
+  description = "Flag indicating that the activity-tracker instance should be provisioned"
+  default     = "false"
+}
