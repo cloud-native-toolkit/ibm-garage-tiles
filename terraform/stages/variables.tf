@@ -53,12 +53,6 @@ variable "vlan_region" {
   default     = ""
 }
 
-variable "vpc_zone_names" {
-  type        = string
-  description = "Comma-separated list of zones"
-  default     = ""
-}
-
 # Cluster Variables
 variable "cluster_machine_type" {
   type        = string
@@ -66,10 +60,17 @@ variable "cluster_machine_type" {
   default     = "b3c.4x16"
 }
 
+# Cluster Variables
+variable "flavor" {
+  type        = string
+  description = "The machine type for the cluster worker nodes (b3c.4x16 is minimum for OpenShift)"
+  default     = "mx2.4x32"
+}
+
 # Cluster Variables_num
 variable "cluster_worker_count" {
   description = "The number of worker nodes for the cluster"
-  default     = 2
+  default     = 3
 }
 
 # Cluster Variables
@@ -134,7 +135,7 @@ variable "vpc_cluster" {
 
 variable "provision_logdna" {
   type        = string
-  description = "Flag indicating that the logdna instance should be provisioned"
+  description = "Flag indicating that the logdna instance already exists"
   default     = "false"
 }
 
@@ -146,7 +147,7 @@ variable "logdna_name" {
 
 variable "provision_sysdig" {
   type        = string
-  description = "Flag indicating that the sysdig instance should be provisioned"
+  description = "Flag indicating that the sysdig instance already exists"
   default     = "false"
 }
 
@@ -156,8 +157,8 @@ variable "sysdig_name" {
   default     = ""
 }
 
-variable "provision_activity_tracker" {
+variable "vpc_zone_names" {
   type        = string
-  description = "Flag indicating that the activity-tracker instance should be provisioned"
-  default     = "false"
+  description = "Comma-separated list of vpc zone names"
+  default     = ""
 }
