@@ -1,6 +1,7 @@
 module "dev_infrastructure_sysdig" {
-  source = "github.com/ibm-garage-cloud/terraform-ibm-sysdig.git?ref=v2.0.0"
+  source = "github.com/ibm-garage-cloud/terraform-ibm-sysdig.git?ref=v2.1.2"
 
+  cluster_id               = module.dev_cluster.name
   resource_group_name      = module.dev_cluster.resource_group_name
   resource_location        = module.dev_cluster.region
   cluster_config_file_path = module.dev_cluster.config_file_path
@@ -10,4 +11,5 @@ module "dev_infrastructure_sysdig" {
   tags                     = [module.dev_cluster.tag]
   provision                = var.provision_sysdig == "true"
   name                     = var.sysdig_name
+  sync                     = module.dev_infrastructure_logdna.sync
 }
